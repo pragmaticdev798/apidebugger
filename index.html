@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>API Debugger</h1>
+        <div class="input-group">
+            <select id="method">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
+            </select>
+            <input type="text" id="apiUrl" placeholder="Enter API URL" value="https://jsonplaceholder.typicode.com/posts/1">
+            <button onclick="fetchData()">Fetch</button>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+        </div>
+        <textarea id="requestBody" class="hidden" rows="3" placeholder="Enter Request Body(JSON format)"></textarea>
+
+        <h2>Status</h2>
+        <pre id="status"></pre>
+
+        <h2>Headers</h2>
+        <pre id="headers"></pre>
+
+        <h2>Response Body</h2>
+        <pre id="body"></pre>
+        <img id="imagePreview" class="hidden" />
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
